@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway Implementation | Stripe</title>
+    <style>
+    body
+    {
+        margin:0;
+        padding:0;
+         background-color: aliceblue;
+    }
+    .paymentDiv
+    {
+         position: absolute;
+    height: 23%;
+    width: 276px;
+    left: 0;
+    text-align: center;
+    background-size: 100%;
+    background-color: #000000;
+    color:#fff;
+    right: 0;
+    margin: 0 auto;
+    top: 35%;
+    border-radius: 20px;
+    border: 1px solid;
+}
+    </style>
+</head>
+<div class="paymentDiv">
+<h3>Welcome to SBYcc.com</h3>
+<form action="payment" method="POST">
+    <script src="//checkout.stripe.com/v2/checkout.js" class="stripe-button" data-key="<%= key %>" data-amount="2500"
+        data-currency="inr" data-name="SBY Technocrates India" data-description="Billing for coaching institute- sbycc.com"
+        data-locale="auto">
+        </script>
+</form>
+</div>
+<body>
+
+</body>
+
+</html>
